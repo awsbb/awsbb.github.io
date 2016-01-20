@@ -13,21 +13,98 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">awsBB</h1>
+      <h1 class="project-name">Awsbb</h1>
       <h2 class="project-tagline"></h2>
       <a href="https://github.com/awsbb/awsbb" class="btn">View on GitHub</a>
       <a href="https://github.com/awsbb/awsbb/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/awsbb/awsbb/tarball/master" class="btn">Download .tar.gz</a>
     </section>
+
     <section class="main-content">
       <h1>
         <a id="awsbb" class="anchor" href="#awsbb" aria-hidden="true">
           <span class="octicon octicon-link"></span>
         </a>awsBB
       </h1>
+      <p>Serverless AWS based forum software (In-Progress)</p>
+      <h3>
+        <a id="directories" class="anchor" href="#directories" aria-hidden="true">
+          <span class="octicon octicon-link"></span>
+        </a>Directories:
+      </h3>
+      <ul>
+        <li>./webpack
+          <ul>
+            <li>Client source.</li>
+          </ul>
+        </li>
+        <li>./static
+          <ul>
+            <li>Compiled distribution to be hosted on a S3 bucket.</li>
+          </ul>
+        </li>
+        <li>./plugin
+          <ul>
+            <li>General store for server side local development.</li>
+          </ul>
+        </li>
+        <li>./plugin/aws/
+          <ul>
+            <li>AWS code in abstracted form to utilize local installs.</li>
+          </ul>
+        </li>
+        <li>./plugin/route-maps
+          <ul>
+            <li>Lambda-&gt;HapiJS route translation.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>This README and project is still highly unstable since it just began. It's being built up piece by piece.</p>
+      <p>The routes you will see also are
+        <strong>not</strong>
+        REST compliant until a more finalized version is complete; that and the API's will not be designed for 3rd party consumption. (TBD)
+      </p>
+      <h3>
+        <a id="technologies--installables" class="anchor" href="#technologies--installables" aria-hidden="true">
+          <span class="octicon octicon-link"></span>
+        </a>Technologies &amp; Installables:
+      </h3>
+      <ul>
+        <li>React (routing, hot loading, etc)</li>
+        <li>Redux (routing, devtools, etc)</li>
+        <li>Node (5+)</li>
+        <li>Webpack</li>
+        <li>HapiJS</li>
+        <li>AWS (Anything)</li>
+        <li>Babel</li>
+        <li>Postcss</li>
+        <li>Rucksack</li>
+        <li>Bootstrap3</li>
+        <li>FontAwesome</li>
+        <li>ESLint</li>
+        <li>Lot's more stuffies...</li>
+      </ul>
+      <h3>
+        <a id="installation" class="anchor" href="#installation" aria-hidden="true">
+          <span class="octicon octicon-link"></span>
+        </a>Installation
+      </h3>
+      <pre>
+        <code>
+          git clone git@github.com:awsbb/awsbb.git
+          npm i
+          nodemon
+        </code>
+      </pre>
+      <p>If something doesn't run you may need somethings in your global packages.</p>
+      <p>Module versioning is nothing I'm worried about right now because it's all still in development. Things can and will break! :)</p>
+      <p>This package setup supports HMR of both the client and the server.</p>
+      <p>
+        <em>Please Note</em>: You may see items committed here and there which is just me or someone else learning something along the way.
+      </p>
       <footer class="site-footer">
         <span class="site-footer-owner">
-          <a href="https://github.com/awsbb/awsbb">awsBB</a>
+          <a href="https://github.com/awsbb/awsbb">Awsbb</a>
           is maintained by
           <a href="https://github.com/awsbb">awsbb</a>.
         </span>
@@ -37,7 +114,7 @@
           <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a>
           by
           <a href="https://twitter.com/jasonlong">Jason Long</a>.
-				</span>
+        </span>
       </footer>
     </section>
   </body>
