@@ -1,121 +1,64 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>awsBB by awsbb</title>
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta content="Ryan Wilson" name="author">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta content="Ryan Wilson" name="author"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/loader.css" media="screen"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/5.1.0/markdown-it.min.js"></script>
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Awsbb</h1>
+    <section id="header" class="page-header">
+      <h1 class="project-name">awsBB</h1>
       <h2 class="project-tagline"></h2>
       <a href="https://github.com/awsbb/awsbb" class="btn">View on GitHub</a>
       <a href="https://github.com/awsbb/awsbb/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/awsbb/awsbb/tarball/master" class="btn">Download .tar.gz</a>
     </section>
-
-    <section class="main-content">
-      <h1>
-        <a id="awsbb" class="anchor" href="#awsbb" aria-hidden="true">
-          <span class="octicon octicon-link"></span>
-        </a>awsBB
-      </h1>
-      <p>Serverless AWS based forum software (In-Progress)</p>
-      <h3>
-        <a id="directories" class="anchor" href="#directories" aria-hidden="true">
-          <span class="octicon octicon-link"></span>
-        </a>Directories:
-      </h3>
-      <ul>
-        <li>./webpack
-          <ul>
-            <li>Client source.</li>
-          </ul>
-        </li>
-        <li>./static
-          <ul>
-            <li>Compiled distribution to be hosted on a S3 bucket.</li>
-          </ul>
-        </li>
-        <li>./plugin
-          <ul>
-            <li>General store for server side local development.</li>
-          </ul>
-        </li>
-        <li>./plugin/aws/
-          <ul>
-            <li>AWS code in abstracted form to utilize local installs.</li>
-          </ul>
-        </li>
-        <li>./plugin/route-maps
-          <ul>
-            <li>Lambda-&gt;HapiJS route translation.</li>
-          </ul>
-        </li>
-      </ul>
-      <p>This README and project is still highly unstable since it just began. It's being built up piece by piece.</p>
-      <p>The routes you will see also are
-        <strong>not</strong>
-        REST compliant until a more finalized version is complete; that and the API's will not be designed for 3rd party consumption. (TBD)
-      </p>
-      <h3>
-        <a id="technologies--installables" class="anchor" href="#technologies--installables" aria-hidden="true">
-          <span class="octicon octicon-link"></span>
-        </a>Technologies &amp; Installables:
-      </h3>
-      <ul>
-        <li>React (routing, hot loading, etc)</li>
-        <li>Redux (routing, devtools, etc)</li>
-        <li>Node (5+)</li>
-        <li>Webpack</li>
-        <li>HapiJS</li>
-        <li>AWS (Anything)</li>
-        <li>Babel</li>
-        <li>Postcss</li>
-        <li>Rucksack</li>
-        <li>Bootstrap3</li>
-        <li>FontAwesome</li>
-        <li>ESLint</li>
-        <li>Lot's more stuffies...</li>
-      </ul>
-      <h3>
-        <a id="installation" class="anchor" href="#installation" aria-hidden="true">
-          <span class="octicon octicon-link"></span>
-        </a>Installation
-      </h3>
-      <pre>
-        <code>
-          git clone git@github.com:awsbb/awsbb.git
-          npm i
-          nodemon
-        </code>
-      </pre>
-      <p>If something doesn't run you may need somethings in your global packages.</p>
-      <p>Module versioning is nothing I'm worried about right now because it's all still in development. Things can and will break! :)</p>
-      <p>This package setup supports HMR of both the client and the server.</p>
-      <p>
-        <em>Please Note</em>: You may see items committed here and there which is just me or someone else learning something along the way.
-      </p>
-      <footer class="site-footer">
-        <span class="site-footer-owner">
-          <a href="https://github.com/awsbb/awsbb">Awsbb</a>
-          is maintained by
-          <a href="https://github.com/awsbb">awsbb</a>.
-        </span>
-        <span class="site-footer-credits">This page was generated by
-          <a href="https://pages.github.com">GitHub Pages</a>
-          using the
-          <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a>
-          by
-          <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </span>
-      </footer>
+    <div id="loader" class="load-bar">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <section id="content" class="main-content" style="display: none;">
+      <footer id="footer" class="site-footer">
+          <span class="site-footer-owner">
+            <a href="https://github.com/awsbb/awsbb">awsBB</a> is maintained by <a href="https://github.com/awsbb">awsbb</a>.
+          </span>
+          <span class="site-footer-credits">
+            This uses the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+          </span>
+        </footer>
     </section>
   </body>
+  <script>
+    // Create Base64 Object
+    var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/\r\n/g,"\n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
+    var md = new markdownit({
+      html: true,
+      linkify: true,
+      typographer: true
+    });
+    $(document).ready(function () {
+      $.get('https://api.github.com/repos/awsbb/awsbb/readme')
+      .done(function(response){
+        var content = Base64.decode(response.content);
+        $('#content').prepend(md.render(content));
+        setTimeout(function(){
+          $('#loader').html('');
+          $('#content').fadeIn();
+        }, 250);
+      })
+      .error(function(){
+
+      });
+    });
+  </script>
 </html>
