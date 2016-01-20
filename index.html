@@ -6,59 +6,111 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
     <meta content="Ryan Wilson" name="author"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"/>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="stylesheets/loader.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/loader.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/5.1.0/markdown-it.min.js"></script>
   </head>
   <body>
-    <section id="header" class="page-header">
-      <h1 class="project-name">awsBB</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/awsbb/awsbb" class="btn">View on GitHub</a>
-      <a href="https://github.com/awsbb/awsbb/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/awsbb/awsbb/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
-    <div id="loader" class="load-bar">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 no-padding">
+          <section id="header">
+            <h1 class="project-name">awsBB</h1>
+            <h2 class="project-tagline"></h2>
+            <div class="row">
+              <div class="btn-group" role="group" aria-label="...">
+                <a href="https://github.com/awsbb/awsbb" class="btn">
+                  <i class="fa fa-fw fa-github"></i>
+                  View on GitHub
+                </a>
+                <a href="https://github.com/awsbb/awsbb/zipball/master" class="btn">
+                  <i class="fa fa-fw fa-file-archive-o"></i>
+                  .zip
+                </a>
+                <a href="https://github.com/awsbb/awsbb/tarball/master" class="btn">
+                  <i class="fa fa-fw fa-file-archive-o"></i>
+                  .tar.gz
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 no-padding">
+          <div id="loader" class="load-bar">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <section id="content" style="display: none;">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div id="error" class="alert alert-warning" role="alert" style="margin-top: 50px; display: none;">
+                        <strong>Hot Damn!</strong> I couldn't get the README.md contents. Maybe have a look at it here:
+                        <a href="https://github.com/awsbb/awsbb/blob/master/README.md" target="_blank">here</a>.
+                      </div>
+                      <div id="readme" class="main-content"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <footer id="footer" class="site-footer">
+                        <span class="site-footer-owner">
+                          <a href="https://github.com/awsbb/awsbb">awsBB</a>
+                          is maintained by
+                          <a href="https://github.com/awsbb">awsbb</a>.
+                        </span>
+                        <span class="site-footer-credits">
+                          This theme was inspired by the
+                          <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a>; by
+                          <a href="https://twitter.com/jasonlong">Jason Long</a>.
+                        </span>
+                      </footer>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <section id="content" class="main-content" style="display: none;">
-      <footer id="footer" class="site-footer">
-          <span class="site-footer-owner">
-            <a href="https://github.com/awsbb/awsbb">awsBB</a> is maintained by <a href="https://github.com/awsbb">awsbb</a>.
-          </span>
-          <span class="site-footer-credits">
-            This uses the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-          </span>
-        </footer>
-    </section>
   </body>
   <script>
-    // Create Base64 Object
-    var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/\r\n/g,"\n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
     var md = new markdownit({
       html: true,
       linkify: true,
       typographer: true
     });
     $(document).ready(function () {
-      $.get('https://api.github.com/repos/awsbb/awsbb/readme')
-      .done(function(response){
-        var content = Base64.decode(response.content);
-        $('#content').prepend(md.render(content));
-        setTimeout(function(){
-          $('#loader').html('');
-          $('#content').fadeIn();
-        }, 250);
-      })
-      .error(function(){
-
-      });
+      $.get('https://raw.githubusercontent.com/awsbb/awsbb/master/README.md')
+        .done(function (content) {
+          $('#readme').html(md.render(content));
+          setTimeout(function () {
+            $('#loader').html('');
+            $('#error').hide();
+            $('#content').fadeIn();
+          }, 250);
+        })
+        .error(function () {
+          $('#readme').html('');
+          setTimeout(function () {
+            $('#loader').html('');
+            $('#error').show();
+            $('#content').fadeIn();
+          }, 250);
+        });
     });
   </script>
 </html>
