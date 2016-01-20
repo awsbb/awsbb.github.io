@@ -21,9 +21,19 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.no-padding {
-  padding-left: 0px;
-  padding-right: 0px;
+.drop-it {
+  color: #fff;
+  font-size: 10rem;
+  font-weight: bold;
+  font-family: 'Roboto';
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+.drop-it {
+  text-align: center;
+}
+.container-full {
+  margin: 0 auto;
+  width: 100%;
 }
 .btn {
   display: inline-block;
@@ -50,9 +60,10 @@ a:hover {
   text-align: center;
   background-color: #159957;
   background-image: linear-gradient(120deg, #155799, #159957);
-  padding: 50px;
+  padding: 75px 0;
 }
 #header > h1 {
+  font-size: 3em;
   margin: 0 !important;
 }
 .main-content:first-child {
@@ -62,8 +73,8 @@ a:hover {
   max-width: 100%;
 }
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
-  margin-top: 2em;
-  margin-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
   font-weight: normal;
   color: #159957;
 }
@@ -175,6 +186,9 @@ a:hover {
   margin: 1em 0;
   background-color: #eff0f1;
   border: 0;
+}
+#footer {
+  margin-bottom: 25px;
 }
 .site-footer {
   padding-top: 2em;

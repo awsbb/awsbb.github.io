@@ -8,81 +8,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/loader.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/headline.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/5.1.0/markdown-it.min.js"></script>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 no-padding">
-          <section id="header">
-            <h1 class="project-name">awsBB</h1>
-            <h2 class="project-tagline"></h2>
-            <div class="row">
-              <div class="btn-group" role="group" aria-label="...">
-                <a href="https://github.com/awsbb/awsbb" class="btn">
-                  <i class="fa fa-fw fa-github"></i>
-                  View on GitHub
-                </a>
-                <a href="https://github.com/awsbb/awsbb/zipball/master" class="btn">
-                  <i class="fa fa-fw fa-file-archive-o"></i>
-                  .zip
-                </a>
-                <a href="https://github.com/awsbb/awsbb/tarball/master" class="btn">
-                  <i class="fa fa-fw fa-file-archive-o"></i>
-                  .tar.gz
-                </a>
+        <section id="header">
+          <div class="drop-it">awsBB</div>
+          <h2 class="project-tagline"></h2>
+          <div>
+            <div class="btn-group" role="group" aria-label="...">
+              <a href="https://github.com/awsbb/awsbb" class="btn">
+                <i class="fa fa-fw fa-github"></i>
+                View on GitHub
+              </a>
+              <a href="https://github.com/awsbb/awsbb/zipball/master" class="btn">
+                <i class="fa fa-fw fa-file-archive-o"></i>
+                .zip
+              </a>
+              <a href="https://github.com/awsbb/awsbb/tarball/master" class="btn">
+                <i class="fa fa-fw fa-file-archive-o"></i>
+                .tar.gz
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="row">
+        <div id="loader" class="load-bar">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <section id="content" style="display: none;">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div id="error" class="alert alert-warning" role="alert" style="margin-top: 50px; display: none;">
+                    <strong>Hot Damn!</strong>
+                    I couldn't get the README.md contents. Maybe have a look at it here:
+                    <a href="https://github.com/awsbb/awsbb/blob/master/README.md" target="_blank">here</a>.
+                  </div>
+                  <div id="readme" class="main-content"></div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <footer id="footer" class="site-footer">
+                    <span class="site-footer-owner">
+                      <a href="https://github.com/awsbb/awsbb">awsBB</a>
+                      is maintained by
+                      <a href="https://github.com/awsbb">awsbb</a>.
+                    </span>
+                    <span class="site-footer-credits">
+                      This theme was inspired by the
+                      <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a>; by
+                      <a href="https://twitter.com/jasonlong">Jason Long</a>.
+                    </span>
+                  </footer>
+                </div>
               </div>
             </div>
           </section>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 no-padding">
-          <div id="loader" class="load-bar">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
-              <section id="content" style="display: none;">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <div id="error" class="alert alert-warning" role="alert" style="margin-top: 50px; display: none;">
-                        <strong>Hot Damn!</strong> I couldn't get the README.md contents. Maybe have a look at it here:
-                        <a href="https://github.com/awsbb/awsbb/blob/master/README.md" target="_blank">here</a>.
-                      </div>
-                      <div id="readme" class="main-content"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <footer id="footer" class="site-footer">
-                        <span class="site-footer-owner">
-                          <a href="https://github.com/awsbb/awsbb">awsBB</a>
-                          is maintained by
-                          <a href="https://github.com/awsbb">awsbb</a>.
-                        </span>
-                        <span class="site-footer-credits">
-                          This theme was inspired by the
-                          <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a>; by
-                          <a href="https://twitter.com/jasonlong">Jason Long</a>.
-                        </span>
-                      </footer>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
         </div>
       </div>
     </div>
